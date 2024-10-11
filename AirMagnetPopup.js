@@ -1,4 +1,4 @@
-ocument.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('AirMagnet-PopupContainer');
     const closeBtn = document.getElementById('AirMagnet-ClosePopup');
     const iframe = document.getElementById('AirMagnet-Iframe');
@@ -23,8 +23,9 @@ ocument.addEventListener('DOMContentLoaded', function() {
     // Update iframe height dynamically after the content is fully loaded
     window.addEventListener('message', function(event) {
 
-        const height = event.data; // Get the height from the message
-        iframe.style.height = height + 'px'; // Set the iframe height
+        const message = event.data;
+        if (message.type=='AirMagnetPopup-Height')
+        iframe.style.height = message.value + 'px'; // Set the iframe height
     });
 
 });
