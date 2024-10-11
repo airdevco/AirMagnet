@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('message', function(event) {
 
         const message = event.data;
-        if (message.type=='AirMagnetPopup-Height')
+        if (message.type=='AirMagnet-Height')
         iframe.style.height = message.value + 'px'; // Set the iframe height
     });
 
