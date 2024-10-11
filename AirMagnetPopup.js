@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('AirMagnet-PopupContainer');
     const closeBtn = document.getElementById('AirMagnet-ClosePopup');
-    const iframe = document.getElementById('AirMagnet-Iframe');
+    const iframe = document.getElementById('AirMagnet-Iframe-Popup');
 
     // Function to show the popup
     window.AirMagnetShowPopup = function() {
